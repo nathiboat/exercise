@@ -1,6 +1,6 @@
 # Back-end Developer Test
 
-This is a simple (and hopefully fun) exercise, used to evaluate your ability to design and build a solution to satisfy a set of requirements. Your solution must come in the form of a **command-line** application (see below for details), and shouldn't take longer than an hour to complete.
+This is a simple (and hopefully fun) exercise, used to evaluate your ability to design and build a solution to satisfy a set of requirements. Your solution must come in the form of a **command-line** application (see below for details), and shouldn't take longer than an hour to complete. If you feel that there are any obvious areas for improvement that you could make if you had more time to spend on it, please note them in your README.
 
 You can pick any of **PHP**, **NodeJS** or **Scala** to build your app. You are only **required** to submit a solution in **one** of those languages, but for bonus points you are welcome to complete the test in two, or even all three languages.
 
@@ -28,6 +28,7 @@ The command line application **must**:
   4. Output one line for each result, in the following format: `{repo_full_name} [{last_commiting_user_login}] - {days_since_last_commit}`
   5. After the results, on a separate line, output the number of results in the format: `=> {total_count} total result(s) found` where `total_count` is the number of results from inital query, not just the top ten.
 
+Please provide a README with basic instructions on how to run your application, and assumptions you made when writing it.
 
 ### Evaluation
 
@@ -36,3 +37,4 @@ While your submission must work for any arbitrary search term, it will be tested
   * `lipstick`
   * `skin care`
   * `mascara`
+  
