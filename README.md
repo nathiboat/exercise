@@ -11,7 +11,7 @@ Your solution must work with the following platforms (depending on your language
 
   * PHP `5.6`
   * NodeJS `8.1`
-  * Scala `2.11` and Oracle JDK `8`
+  * Scala `2.12` and Oracle JDK `8`
 
 It will be tested on Ubuntu `14.04`, but that should make no difference to your solution (any Linux distro will do).
 
@@ -23,10 +23,27 @@ Besides the platform restriction above, you are welcome to use any libraries (or
 The command line application **must**:
 
   1. Take a single argument specifying the search term, and error out if one is not provided
-  2. Using the [Github](https://developer.github.com/v3/) API as a starting point, find the top ten repositories, sorted by the number of stars they have that have a description containing the given search term **as a full phrase** (not just the words individually).
-  3. For each repository find the user who last commited to it.
-  4. Output one line for each result, in the following format: `{repo_full_name} [{last_commiting_user_login}] - {days_since_last_commit}`
-  5. After the results, on a separate line, output the number of results in the format: `=> {total_count} total result(s) found` where `total_count` is the number of results from inital query, not just the top ten.
+  2. Using the [Github API](https://developer.github.com/v3/) as a starting point, find all the repositories that have a description containing the given search term **as a full phrase** (not just the words individually). To avoid hitting the API rate limit, you should only load **up to 1000** results.
+  3. Filter out any repos with an empty "language" (`null` or empty String)
+  4. Group the remaining list of repos by "language", and count the number of occurrences for each
+  5. Sort the languages by occurrence descending
+  6. Output a line for each result, in the `{language}: {count}` format
+  7. After the results, on a separate line, output the total number of search results in the format: `=> {total_count} total result(s) found`
+
+For example, using `shampoo` as an input, it should return something like:
+```
+JavaScript: 6
+C#: 2
+Emacs Lisp: 1
+Jupyter Notebook: 1
+HTML: 1
+Python: 1
+CMake: 1
+Go: 1
+TypeScript: 1
+PHP: 1
+=> 29 total result(s) found
+```
 
 Please provide a README with basic instructions on how to run your application, and assumptions you made when writing it.
 
