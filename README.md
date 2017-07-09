@@ -7,7 +7,7 @@
 ### Summary
 
 This command line application install via composer and using one dependcy called `"symfony/console": "~2.0"`.
-There is no plugin used in this application. it looks quite simple but can be extended to be more usfull to deal with github api.
+There is no plugin used in this application. it looks quite simple but can be extended to be more useful to deal with github api.
 
 
 ### Install
