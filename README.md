@@ -23,7 +23,7 @@ There is no plugin used in this application. it looks quite simple but can be ex
 ```
 php cb show <argument>
 ```
-For example, using `shampoo` as an input will output result in Output a line for each result, in the `{language}: {count}` format.
+For example, using `php cb show shampoo` as an input will output result in Output a line for each result, in the `{language}: {count}` format.
 and After the results, on a separate line, output the total number of search results in the format: `=> {total_count} total result(s) 
 
 ```
@@ -39,5 +39,39 @@ TypeScript: 1
 PHP: 1
 => 29 total result(s) found
 ```
+### Extra Time
 
-  
+  ```
+  php cb render <argument>
+  ```
+
+will show result as same as `php cb show shampoo` but in table format. e.g.
+
+```
++------------------+--------+
+| Language         | Number |
++------------------+--------+
+| Python           | 3      |
+| CoffeeScript     | 1      |
+| Java             | 1      |
+| Smalltalk        | 1      |
+| JavaScript       | 11     |
+| Emacs Lisp       | 1      |
+| C++              | 1      |
+|                  | 23     |
+| Ruby             | 4      |
+| ColdFusion       | 1      |
+| HTML             | 4      |
+| Go               | 1      |
+| CSS              | 1      |
+| TypeScript       | 1      |
+| Assembly         | 1      |
+| PHP              | 2      |
+| Jupyter Notebook | 1      |
+| C#               | 2      |
+| Shell            | 1      |
+| CMake            | 1      |
++------------------+--------+
+=> 62 result(s) found
+
+```

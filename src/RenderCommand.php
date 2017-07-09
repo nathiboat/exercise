@@ -48,16 +48,14 @@ class RenderCommand extends Command
         $arr = [];
         foreach($count as $key =>  $value) {
             $num = $this->total_lang_count($items,$value);
-            array_push($arr,[`$value`,$num]);
+            array_push($arr,[$value,$num]);
 
         }
         $total = count($items);
 
 
         $table->setHeaders(['Language', 'Number'])
-            ->setRows([
-                $arr
-            ])->render();
+            ->setRows($arr)->render();
 
         $output->writeln("<info>=> {$total} result(s) found</info>");
     }
