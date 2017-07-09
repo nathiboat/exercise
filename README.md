@@ -1,36 +1,31 @@
 # Back-end Developer Test
 
-This is a simple (and hopefully fun) exercise, used to evaluate your ability to design and build a solution to satisfy a set of requirements. Your solution must come in the form of a **command-line** application (see below for details), and shouldn't take longer than an hour to complete. If you feel that there are any obvious areas for improvement that you could make if you had more time to spend on it, please note them in your README.
-
-You can pick any of **PHP**, **NodeJS** or **Scala** to build your app. You are only **required** to submit a solution in **one** of those languages, but for bonus points you are welcome to complete the test in two, or even all three languages.
-
-
-### Technical Requirements
-
-Your solution must work with the following platforms (depending on your language of choice):
+### Technical Used
 
   * PHP `5.6`
-  * NodeJS `8.1`
-  * Scala `2.12` and Oracle JDK `8`
 
-It will be tested on Ubuntu `14.04`, but that should make no difference to your solution (any Linux distro will do).
+### Summary
 
-Besides the platform restriction above, you are welcome to use any libraries (or none at all) to come up with your solution.
+This command line application install via composer and using one dependcy called `"symfony/console": "~2.0"`.
+There is no plugin used in this application. it looks quite simple but can be extended to be more usfull to deal with github api.
 
 
-### Functional Requirements
+### Install
+* clone this repository or downlaod to the directory you prefer.
+* using console (cmd for window) nevigate to the directory of this project
+* install via composer `composer install` command
+* type cammand line provide to see result
+* have fun ^_^
 
-The command line application **must**:
 
-  1. Take a single argument specifying the search term, and error out if one is not provided
-  2. Using the [Github API](https://developer.github.com/v3/) as a starting point, find all the repositories that have a description containing the given search term **as a full phrase** (not just the words individually). To avoid hitting the API rate limit, you should only load **up to 1000** results.
-  3. Filter out any repos with an empty "language" (`null` or empty String)
-  4. Group the remaining list of repos by "language", and count the number of occurrences for each
-  5. Sort the languages by occurrence descending
-  6. Output a line for each result, in the `{language}: {count}` format
-  7. After the results, on a separate line, output the total number of search results in the format: `=> {total_count} total result(s) found`
+### Command 
 
-For example, using `shampoo` as an input, it should return something like:
+```
+php cb show <argument>
+```
+For example, using `shampoo` as an input will output result in Output a line for each result, in the `{language}: {count}` format.
+and After the results, on a separate line, output the total number of search results in the format: `=> {total_count} total result(s) 
+
 ```
 JavaScript: 6
 C#: 2
@@ -45,13 +40,4 @@ PHP: 1
 => 29 total result(s) found
 ```
 
-Please provide a README with basic instructions on how to run your application, and assumptions you made when writing it.
-
-### Evaluation
-
-While your submission must work for any arbitrary search term, it will be tested with the following:
-
-  * `lipstick`
-  * `skin care`
-  * `mascara`
   

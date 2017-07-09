@@ -1,0 +1,19 @@
+#!/usr/bin/env php
+<?php
+// application.php
+
+require __DIR__.'/vendor/autoload.php';
+
+use Symfony\Component\Console\Application;
+use App\SearchCommand;
+use App\RenderCommand;
+
+
+$app = new Application('CB Command Line Application', '1.0');
+
+$app->add(new SearchCommand);
+$app->add(new RenderCommand);
+
+
+
+$app->run();
