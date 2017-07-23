@@ -42,7 +42,7 @@ class SearchCommand extends Command
         $count = array_unique($this->langCount($items));
 
 
-        foreach($count as  $value) { //foreach element in $arr
+        foreach($count as  $value) {
             $num = $this->total_lang_count($items,$value);
             $output->writeln("<info>{$value}: {$num}</info>");
 
